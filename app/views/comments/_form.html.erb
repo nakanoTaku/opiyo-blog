@@ -1,0 +1,13 @@
+<%= form_for( [@post, @post.comments.build] ) do |f| %>
+  <p>
+    <%= f.label :commenter, "こめんたー" %><br>
+    <%= f.text_field :commenter %>
+  </p>
+  <p>
+    <%= f.label :body, "コメント" %><br>
+    <%= f.text_area :body, cols: 60, rows: 8 %>
+  </p>
+  <p>
+    <%= f.submit "コメントを投稿"%>
+  </p>
+<% end %>
